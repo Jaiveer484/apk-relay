@@ -1,0 +1,20 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; background: #0e1525; color: #eef3ff; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at top right, #233c60, transparent 55%); }
+header { padding: 1.25rem max(5vw, 1rem); border-bottom: 1px solid #3b4e68; }
+header a { color: inherit; font-size: 1.25rem; font-weight: 800; text-decoration: none; }
+header span { color: #90f4c9; }
+main { max-width: 680px; margin: auto; padding: clamp(2rem, 8vw, 5rem) 1rem; }
+h1 { margin: 0; font-size: clamp(2.4rem, 7vw, 4.4rem); line-height: 1.02; letter-spacing: -.055em; }
+p, small { color: #becce1; line-height: 1.5; }
+.card { margin-top: 1.5rem; padding: clamp(1.2rem, 4vw, 2rem); border: 1px solid #3b4e68; border-radius: 1rem; background: #182539; overflow-wrap: anywhere; }
+#drop { border-style: dashed; }
+#drop.active { border-color: #90f4c9; background: #203c44; }
+label { display: block; font-weight: 700; }
+input, progress { display: block; margin: .65rem 0; width: 100%; font: inherit; }
+input[readonly] { padding: .6rem; border: 1px solid #667997; border-radius: .4rem; background: #0e1525; }
+button, .button { display: inline-block; margin-top: .7rem; padding: .75rem 1.1rem; border: 0; border-radius: .55rem; background: #90f4c9; color: #11261f; font: inherit; font-weight: 750; cursor: pointer; text-decoration: none; }
+form button { display: block; }
+button:disabled { opacity: .6; cursor: wait; }
+img { max-width: 100%; height: auto; border-radius: .5rem; }
+[hidden] { display: none !important; }

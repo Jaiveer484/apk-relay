@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APK Relay</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header><a href="/">APK<span>Relay</span></a></header>
+  <main>
+    <section id="sender">
+      <h1>Send an APK to your Android phone.</h1>
+      <p>Upload your build and scan the QR code on the receiving device.</p>
+      <div id="drop" class="card">
+        <form id="upload">
+          <label for="file">Choose or drop an APK</label>
+          <input id="file" name="file" type="file" accept=".apk" required>
+          <small>Up to 100 MB. Transfers expire after 30 minutes.</small>
+          <button>Upload APK</button>
+          <progress id="progress" max="100" hidden></progress>
+        </form>
+      </div>
+      <section class="card" id="share" hidden>
+        <h2>Scan to download</h2>
+        <img id="qr" width="256" height="256" alt="QR code for the download page">
+        <p id="expiry"></p>
+        <label for="link">Share link</label>
+        <input id="link" readonly>
+        <button id="copy">Copy link</button>
+      </section>
+    </section>
+    <section id="receiver" hidden>
+      <h1>Receive an APK</h1>
+      <div class="card" id="details" hidden>
+        <h2 id="name"></h2>
+        <p id="size"></p>
+        <a class="button" id="download">Download APK</a>
+        <p>Only install APKs from people you trust.</p>
+      </div>
+    </section>
+    <p id="status" role="status"></p>
+  </main>
+</body>
+</html>
